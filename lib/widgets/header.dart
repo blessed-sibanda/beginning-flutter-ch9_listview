@@ -14,12 +14,12 @@ class HeaderWidget extends StatelessWidget {
         elevation: 8.0,
         color: Colors.white,
         // shape: const StadiumBorder(),
-        // shape: const UnderlineInputBorder(
-        //   borderSide: BorderSide(color: Colors.deepOrange),
-        // ),
-        shape: OutlineInputBorder(
-          borderSide: BorderSide(color: Colors.deepOrange.withOpacity(0.5)),
+        shape: const UnderlineInputBorder(
+          borderSide: BorderSide(color: Colors.deepOrange),
         ),
+        // shape: OutlineInputBorder(
+        //   borderSide: BorderSide(color: Colors.deepOrange.withOpacity(0.5)),
+        // ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: const [

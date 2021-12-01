@@ -1,3 +1,6 @@
+import 'package:ch9_listview/widgets/header.dart';
+import 'package:ch9_listview/widgets/row.dart';
+import 'package:ch9_listview/widgets/row_with_card.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -18,13 +21,15 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: SafeArea(
         child: ListView.builder(
-          itemCount: 2,
+          itemCount: 20,
           itemBuilder: (BuildContext context, int index) {
-            return Container(
-              color: Colors.red,
-              height: 20,
-              width: 10,
-            );
+            if (index == 0) {
+              return HeaderWidget(index: index);
+            } else if (index >= 1 && index <= 3) {
+              return RowWithCardWidget(index: index);
+            } else {
+              return RowWidget(index: index);
+            }
           },
         ),
       ),
